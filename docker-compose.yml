@@ -1,0 +1,23 @@
+
+version: "3.9"
+services:
+  showcase:
+    build: ./apps/showcase
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nft-launchpad
+      - onchain-game
+      - dashboard
+  nft-launchpad:
+    build: ./apps/solana-nft-launchpad
+    ports:
+      - "3010:3000"
+  onchain-game:
+    build: ./apps/onchain-game
+    ports:
+      - "3020:3000"
+  dashboard:
+    build: ./apps/decentralized-dashboard
+    ports:
+      - "3030:3000"
