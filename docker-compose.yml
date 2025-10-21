@@ -10,14 +10,14 @@ services:
       - onchain-game
       - dashboard
   nft-launchpad:
-    build: ./apps/solana-nft-launchpad
+    build: apps/solana-nft-gallery
     ports:
       - "3010:3000"
   onchain-game:
-    build: ./apps/onchain-game
+    build: apps/chainscore-solana
     ports:
       - "3020:3000"
   dashboard:
-    build: ./apps/decentralized-dashboard
+    build: apps/dao_solana_dashboard
     ports:
       - "3030:3000"
